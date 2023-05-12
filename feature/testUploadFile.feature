@@ -3,12 +3,12 @@ Feature: Test upload file
   Scenario Outline: User able to upload the file "<file_storage_des>" successfully
     Given Access the URL
     When Submit the file "<file_storage>" MB
-    And "<Ticked_status>" check box accept term of service
+    And "<ticked_status>" check box accept term of service
     And Click on Submit button
     Then The "<message>" message is displayed correctly
     And Close browser
     Examples:
-      | file_storage_des    | file_storage | Ticked_status | message |
+      | file_storage_des    | file_storage | ticked_status | message |
       | less than 196.45 MB | 196.45       | Yes           | success |
       | equal 196.45 MB     | 196.44       | Yes           | success |
 
@@ -23,12 +23,12 @@ Feature: Test upload file
   Scenario Outline: User unable to upload the file correctly with some condition: "<condition>"
     Given Access the URL
     When Submit the file "<file_storage>" MB
-    And "<Ticked_status>" check box accept term of service
+    And "<ticked_status>" check box accept term of service
     And Click on Submit button
     Then The "<message>" message is displayed correctly
     And Close browser
     Examples:
-      | condition                       | file_storage | Ticked_status | message |
+      | condition                       | file_storage | ticked_status | message |
       | File upload more than 196.45 MB | 196.46       | Yes           | error   |
       | Unticked term of service        | 196.45       | No            | error   |
       | Upload no file                  | 0            | Yes           | error   |

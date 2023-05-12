@@ -18,7 +18,7 @@ def step_impl(context):
 @when("Submit the file")
 def step_impl(context):
     upload_btn = context.driver.find_element(By.XPATH, TestUpload.UploadFileBtn)
-    upload_btn.send_keys("/Users/ha.cao/Desktop/driver/chromedriver_mac_arm64.zip")
+    upload_btn.send_keys(TestUpload.fileUploadURL + "196_45MB.txt")
 
 
 @then("Close browser")
@@ -42,9 +42,9 @@ def step_impl(context, message):
         wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, TestUpload.ErrorMessageCss)))
 
 
-@step('"{Ticked_status}" check box accept term of service')
-def step_impl(context, Ticked_status):
-    if Ticked_status == "Yes":
+@step('"{ticked_status}" check box accept term of service')
+def step_impl(context, ticked_status):
+    if ticked_status == "Yes":
         context.driver.find_element(By.XPATH, TestUpload.CheckBoxTermOfService).click()
 
 
@@ -52,11 +52,12 @@ def step_impl(context, Ticked_status):
 def step_impl(context, file_storage):
     upload_btn = context.driver.find_element(By.XPATH, TestUpload.UploadFileBtn)
     if float(file_storage) == 196.45:
-        upload_btn.send_keys("/Users/ha.cao/Desktop/driver/chromedriver_mac_arm64.zip")
+        upload_btn.send_keys(TestUpload.fileUploadURL + "196_45MB.txt")
     elif float(file_storage) == 196.44:
-        upload_btn.send_keys("/Users/ha.cao/Desktop/driver/chromedriver_mac_arm64.zip")
+        upload_btn.send_keys(TestUpload.fileUploadURL + "196_4MB.txt")
     elif float(file_storage) == 196.46:
-        upload_btn.send_keys("/Users/ha.cao/Desktop/driver/chromedriver_mac_arm64.zip")
+        upload_btn.send_keys(TestUpload.fileUploadURL + "196_46MB.txt")
+
 
 @when("Click on Term of Service link")
 def step_impl(context):
