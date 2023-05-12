@@ -1,2 +1,10 @@
-# UploadFeaturesAutomation
-Automating the regression tests on upload features from scratch using Selenium Cucumber with Python
+project_folder/
+    |- features/
+    |   |- testUploadFile.feature
+    |- pages/
+    |   |- uploadFilePage.py
+    |- steps/
+    |   |- uploadFileSteps.py
+
+
+Introduction:
