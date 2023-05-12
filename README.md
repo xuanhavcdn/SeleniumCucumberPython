@@ -36,6 +36,7 @@ https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=macM1
 ### Copy file path and change the locator of Upload File base on local device:
 <img width="1087" alt="image" src="https://github.com/xuanhavcdn/UploadFeaturesAutomation/assets/24319147/3d63afee-7b23-46a8-b68e-f5b446ec4cd9">
 Because of Github limit upload file, so please download the file on and paste on the project forder: https://drive.google.com/drive/folders/1vuwJLsqVIsC8osnNAWnt9dMhWfAzP-ZO?usp=sharing
+
 ## Run testUploadFile.feature file
 <img width="665" alt="image" src="https://github.com/xuanhavcdn/UploadFeaturesAutomation/assets/24319147/49288574-3af3-4182-ba59-678c0a8cae6c">
 
