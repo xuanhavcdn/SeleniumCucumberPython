@@ -1,4 +1,4 @@
-class LoginPage:
+class SignupPage:
     URL = "https://react-redux.realworld.io/"
     homeBtn = '//a[@href="#/" and contains(text(),"Home")]'
     signInBtn = "//a[@href='#login' and contains(text(),'Sign in')]"
