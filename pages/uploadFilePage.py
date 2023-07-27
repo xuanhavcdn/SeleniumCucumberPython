@@ -8,4 +8,4 @@ class TestUpload:
     CheckBoxTermOfService = "//input[@id='terms']"
     TermOfServiceURL = "//a[normalize-space()='terms of service']"
     TermOfServicePage = "https://demo.guru99.com/test/upload/rules.php"
-    fileUploadURL = "/Users/ha.cao/Desktop/Clone/FileTest/"
+    fileUploadURL = "/Users/ha.cao/Downloads/FileTest/"
