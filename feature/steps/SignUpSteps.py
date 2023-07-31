@@ -58,9 +58,3 @@ def step_impl(context):
         data = json.load(json_file)
     username = data['username']
     context.wait.until(EC.visibility_of_element_located((By.XPATH, SignupPage.SigninUsername + username + "']")))
-
-
-@then("Home screen is displayed correctly with correct username with CSV file")
-def step_impl(context):
-
-    context.wait.until(EC.visibility_of_element_located((By.XPATH, SignupPage.SigninUsername + username + "']")))
