@@ -17,9 +17,10 @@ def step_impl(context):
     context.driver.find_element(By.XPATH, SignInPage.signInBtn).click()
     context.wait = WebDriverWait(context.driver, 10)
 
+
 @step('Input email as "{email}" and password as "{password}"')
 def step_impl(context, email, password):
-    with open('user_data.json', 'r') as json_file:
+    with open('feature/test_data/user_data.json', 'r') as json_file:
         data = json.load(json_file)
     email = data['email']
     context.email = email
