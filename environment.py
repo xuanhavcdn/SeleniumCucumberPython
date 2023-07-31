@@ -1,6 +1,7 @@
 import os
 import allure
 from allure_commons.types import AttachmentType
+from selenium.webdriver.support.wait import WebDriverWait
 
 
 def before_scenario(context, scenario):
