@@ -4,6 +4,7 @@ import random
 import json
 from behave import *
 from selenium.webdriver import Keys
+import csv
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from pages.signUpPage import SignupPage
@@ -41,7 +42,7 @@ def step_impl(context, username, email, password):
         "email": email,
         "username": username
     }
-    json_file_path = "user_data.json"  # Change the file path as needed
+    json_file_path = "feature/test_data/user_data.json"  # Change the file path as needed
     with open(json_file_path, 'w') as json_file:
         json.dump(data, json_file)
 
@@ -53,7 +54,7 @@ def step_impl(context):
 
 @then("Home screen is displayed correctly with correct username")
 def step_impl(context):
-    with open('user_data.json', 'r') as json_file:
+    with open('feature/test_data/user_data.json', 'r') as json_file:
         data = json.load(json_file)
     username = data['username']
     context.wait.until(EC.visibility_of_element_located((By.XPATH, SignupPage.SigninUsername + username + "']")))
