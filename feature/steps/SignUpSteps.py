@@ -18,6 +18,7 @@ def step_impl(context):
     context.driver.maximize_window()
     # implicit wait
     time.sleep(3)
+    context.wait = WebDriverWait(context.driver, 10)
 
 
 @when("Click on Sign up option")
@@ -27,8 +28,6 @@ def step_impl(context):
 
 @step('Input username as "{username}" and email as "{email}" and Password as "{password}"')
 def step_impl(context, username, email, password):
-    # Maximum wait time of 10 seconds
-    context.wait = WebDriverWait(context.driver, 10)
     # fluent wait
     context.wait.until(EC.visibility_of_element_located((By.XPATH, SignupPage.signUpScreen)))
     username = ''.join(random.choice(string.ascii_letters) for _ in range(random.randint(8, 8)))
@@ -52,7 +51,7 @@ def step_impl(context):
     context.driver.find_element(By.XPATH, SignupPage.SignUpInBtn).click()
 
 
-@then("Home screen is display correctly with correct username")
+@then("Home screen is displayed correctly with correct username")
 def step_impl(context):
     with open('user_data.json', 'r') as json_file:
         data = json.load(json_file)

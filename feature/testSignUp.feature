@@ -5,8 +5,8 @@ Feature: Test sign up
     When Click on Sign up option
     And Input username as "<username>" and email as "<email>" and Password as "<password>"
     And Click on Sign up button
-    Then Home screen is display correctly with correct username
+    Then Home screen is displayed correctly with correct username
     And Close browser
     Examples:
       | username   | password | email   |
-      | <username> | Hacao    | <email> |
+      | <username> | Ha@cao   | <email> |

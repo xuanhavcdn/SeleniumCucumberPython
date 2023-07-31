@@ -4,8 +4,8 @@ Feature: Test sign in feature
     When Click on Sign in option button
     And Input email as "<email>" and password as "<password>"
     And Click on Sign up button
-    Then Home screen is display correctly with correct username
+    Then Home screen is displayed correctly with correct username
     And Close browser
     Examples:
       | email   | password |
-      | <email> | Hacao    |
+      | <email> | Ha@cao   |

@@ -15,7 +15,7 @@ from selenium.webdriver.support import expected_conditions as EC
 @when("Click on Sign in option button")
 def step_impl(context):
     context.driver.find_element(By.XPATH, SignInPage.signInBtn).click()
-
+    context.wait = WebDriverWait(context.driver, 10)
 
 @step('Input email as "{email}" and password as "{password}"')
 def step_impl(context, email, password):
